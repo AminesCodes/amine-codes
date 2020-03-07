@@ -6,8 +6,7 @@ export default function NavBar(props) {
     return (
         <nav className='navbar navbar-expand-md navbar-light bg-appColor'>
             <AnchorLink className='navbar-brand' href='#home'>
-                {/* <img className='img-fluid' src={Logo} alt='app logo' width='130px' /> */}
-                logo here
+                <img className='img-fluid' src={require('../assets/file-code-regular.svg')} alt='app logo' width='50px' />
             </AnchorLink>
             <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
                 <span className='navbar-toggler-icon'></span>
@@ -18,6 +17,9 @@ export default function NavBar(props) {
                         <AnchorLink className='nav-link mb-0 h6 text-dark' href='#home'>Home</AnchorLink>
                     </li>
                     <li className='nav-item'>
+                        <AnchorLink className='nav-link mb-0 h6 text-dark' href='#skills'>Skills</AnchorLink>
+                    </li>
+                    <li className='nav-item'>
                         <AnchorLink className='nav-link mb-0 h6 text-dark' href='#projects'>Projects</AnchorLink>
                     </li>
                     <li className='nav-item'>
@@ -25,9 +27,6 @@ export default function NavBar(props) {
                     </li>
                     <li className='nav-item'>
                         <AnchorLink className='nav-link mb-0 h6 text-dark' href='#contact'>Contact</AnchorLink>
-                    </li>
-                    <li className='nav-item'>
-                        <AnchorLink className='nav-link mb-0 h6 text-dark' href='#about'>About</AnchorLink>
                     </li>
                 </ul>
             </div>
