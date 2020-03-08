@@ -1,8 +1,8 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
-import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
+import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 
 
 export default function Contact(props) {
@@ -26,8 +26,8 @@ export default function Contact(props) {
             </div>
             <div className='container-md appSection mx-3-auto'>
                 CONTACT
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </div>
+            <div style={{height: '10vh'}}></div>
         </section>
     )
 }

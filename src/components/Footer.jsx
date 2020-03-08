@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ReactComponent as GithubIcon } from '../assets/github-brands.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/linkedin-brands.svg';
-import { ReactComponent as ContactIcon } from '../assets/envelope-open-text-solid.svg';
+import { ReactComponent as GithubIcon } from '../assets/nav_icons/github-brands.svg';
+import { ReactComponent as LinkedInIcon } from '../assets/nav_icons/linkedin-brands.svg';
+import { ReactComponent as ContactIcon } from '../assets/nav_icons/envelope-open-text-solid.svg';
 
 
 export default function Footer(props) {

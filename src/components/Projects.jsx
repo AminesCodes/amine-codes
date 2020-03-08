@@ -3,9 +3,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import ProjectCardRight from './ProjectCardRight';
 import ProjectCardLeft from './ProjectCardLeft';
-import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
-import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
-import { ReactComponent as DownArrow } from '../assets/arrow-alt-circle-down-solid.svg';
+import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
+import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 import projects from '../assets/projects/projects';
 
 

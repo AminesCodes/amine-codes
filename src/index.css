@@ -20,7 +20,8 @@ code {
 }
 
 .appSection {
-  background-color: #2b282ea4;
+  background-color: #1f1d20bb;
+  min-height: 80vh;
 }
 
 .smallIcon {

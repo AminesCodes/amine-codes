@@ -1,9 +1,18 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
-import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
-import { ReactComponent as DownArrow } from '../assets/arrow-alt-circle-down-solid.svg';
+import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
+import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
+
+import { ReactComponent as CssIcon } from '../assets/skills/css.svg';
+import { ReactComponent as ExpressIcon } from '../assets/skills/express.svg';
+import { ReactComponent as GitIcon } from '../assets/skills/git.svg';
+import { ReactComponent as HtmlIcon } from '../assets/skills/html.svg';
+import { ReactComponent as JsIcon } from '../assets/skills/js.svg';
+import { ReactComponent as NodeIcon } from '../assets/skills/node.svg';
+import { ReactComponent as PostgresIcon } from '../assets/skills/postgres.svg';
+import { ReactComponent as ReactIcon } from '../assets/skills/react.svg';
 
 
 export default function Skills(props) {
@@ -26,8 +35,17 @@ export default function Skills(props) {
                 </AnchorLink>
             </div>
             <div className='container-md appSection mx-3-auto'>
-                SKILLS
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div className='text-center h2'>Some of the tools I like to work with</div>
+                <div className='row justify-content-sm-center'>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><ReactIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><JsIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><NodeIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><HtmlIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><CssIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><PostgresIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><ExpressIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5'><GitIcon /></div>
+                </div>
             </div>
             <div className='text-right'>
                 <AnchorLink href='#projects'>

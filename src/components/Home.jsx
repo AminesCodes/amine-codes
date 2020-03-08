@@ -1,9 +1,9 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
-import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
-import { ReactComponent as DownArrow } from '../assets/arrow-alt-circle-down-solid.svg';
+import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
+import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 
 export default function Home(props) {   
     const style = {
@@ -26,7 +26,6 @@ export default function Home(props) {
             </div>
             <div className='container-md appSection mx-3-auto'>
                 HOME
-                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br />
             </div>
             <div className='text-right'>
                 <AnchorLink href='#skills'>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ReactComponent as GithubIcon } from '../assets/github-brands.svg';
-import { ReactComponent as PlayIcon } from '../assets/play-circle-solid.svg';
+import { ReactComponent as GithubIcon } from '../assets/nav_icons/github-brands.svg';
+import { ReactComponent as PlayIcon } from '../assets/nav_icons/play-circle-solid.svg';
 
 export default function ProjectCardRight(props) {
     return (
