@@ -27,18 +27,19 @@ router.post('/send', (request, response) => {
 
   const mail = {
     from: name,
-    to: 'RECEIVING_EMAIL_ADDRESS_GOES_HERE',  // Change to email address that you want to receive messages on
+    to: 'aminbensalem@outlook.com',  // Change to email address that you want to receive messages on
     subject: 'New Message from Contact Form',
     text: content
   }
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
-      response.json({
+      console.log(err)
+      response.status(500).json({
         status: 'fail'
       })
     } else {
-      response.json({
+      response.status(200).json({
        status: 'success'
       })
     }
