@@ -1,6 +1,7 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import ContactForm from './ContactForm';
 import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
 import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 
@@ -25,7 +26,7 @@ export default function Contact(props) {
                 </AnchorLink>
             </div>
             <div className='container-md appSection mx-3-auto'>
-                CONTACT
+                <ContactForm />
             </div>
             <div style={{height: '10vh'}}></div>
         </section>
