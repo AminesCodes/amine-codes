@@ -1,22 +1,11 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-export default function Contact(props) {
-    const upArrow = <img 
-        src={require('../assets/arrow-alt-circle-up-solid.svg')} 
-        alt='Up arrow' 
-        width='50px' />;
+import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
 
-    const downArrow = <img 
-        src={require('../assets/arrow-alt-circle-down-solid.svg')} 
-        alt='Down arrow' 
-        width='50px' />;
-    
-    const homeIcon = <img 
-        src={require('../assets/home-solid.svg')} 
-        alt='Home icon' 
-        width='50px' />;
-    
+
+export default function Contact(props) {
     const style = {
         background: `url(${require('../assets/contact.jpg')}) no-repeat center center fixed`,
         WebkitBackgroundSize: 'cover',
@@ -28,10 +17,14 @@ export default function Contact(props) {
     return(
         <section className='container-fluid p-3' id='contact' style={style}>
             <div className='d-flex justify-content-between'>
-                <AnchorLink className='btn btn-light' href='#home'>{homeIcon}</AnchorLink>
-                <AnchorLink className='btn btn-light' href='#projects'>{upArrow}</AnchorLink>
+            <AnchorLink href='#navbar'>
+                    <HomeIcon className='navIcon'/>
+                </AnchorLink>
+                <AnchorLink href='#projects'>
+                    <UpArrow className='navIcon'/>
+                </AnchorLink>
             </div>
-            <div className='container-md appSection mx-3-auto my-5'>
+            <div className='container-md appSection mx-3-auto'>
                 CONTACT
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </div>

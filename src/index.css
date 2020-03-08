@@ -10,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: aliceblue;
 }
 
 code {
@@ -19,4 +21,40 @@ code {
 
 .appSection {
   background-color: #2b282ea4;
+}
+
+.smallIcon {
+  cursor: pointer;
+  width: 5vh;
+  margin: 0 3vh;
+  fill: #00adb5
+}
+
+.smallIcon:hover {
+  fill: #eeeeee;
+  background-color: #00adb5;
+  border-radius: 20%;
+}
+
+.navIcon {
+  cursor: pointer;
+  height: 5vh;
+  fill: #00adb5;
+}
+
+.navIcon:hover {
+  fill: #eeeeee;
+  background-color: #00adb5;
+  border-radius: 20%;
+}
+
+.stickyTop {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.projectImage {
+  width: 100%;
+  margin: auto;
 }

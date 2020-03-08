@@ -1,15 +1,13 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
+import { ReactComponent as HomeIcon } from '../assets/home-solid.svg';
+import { ReactComponent as UpArrow } from '../assets/arrow-alt-circle-up-solid.svg';
+import { ReactComponent as DownArrow } from '../assets/arrow-alt-circle-down-solid.svg';
 
-export default function Home(props) {
-    const downArrow = <img 
-        src={require('../assets/arrow-alt-circle-down-solid.svg')} 
-        alt='Down arrow' 
-        width='50px' />
-    
+export default function Home(props) {   
     const style = {
-        background: `url(${require('../assets/coding.png')}) no-repeat center center fixed`,
+        background: `url(${require('../assets/problem-solving.jpg')}) no-repeat center center fixed`,
         WebkitBackgroundSize: 'cover',
         MozBackgroundSize: 'cover',
         OBackgroundSize: 'cover',
@@ -18,12 +16,22 @@ export default function Home(props) {
     
     return(
         <section className='container-fluid p-3' id='home' style={style}>
-            <div className='container-md appSection mx-3-auto mt-5'>
+            <div className='d-flex justify-content-between stickyTop'>
+                <AnchorLink href='#navbar'>
+                    <HomeIcon className='navIcon'/>
+                </AnchorLink>
+                <AnchorLink href='#navbar'>
+                    <UpArrow className='navIcon'/>
+                </AnchorLink>
+            </div>
+            <div className='container-md appSection mx-3-auto'>
                 HOME
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br />
             </div>
             <div className='text-right'>
-                <AnchorLink className='btn btn-light' href='#skills'>{downArrow}</AnchorLink>
+                <AnchorLink href='#skills'>
+                    <DownArrow className='navIcon'/>
+                </AnchorLink>
             </div>
         </section>
     )
