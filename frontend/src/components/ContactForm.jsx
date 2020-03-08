@@ -10,8 +10,26 @@ export default function ContactForm() {
     const [ subject, setSubject ] = useState('');
     const [ message, setMessage ] = useState('');
 
+    const handleSubmitForm = async(e) => {
+        e.preventDefault();
+
+        if (name && email && subject && message) {
+            try {
+                const { data } = await axios.post('/api/contact/send', {name, email, subject, message})
+                console.log(data.payload)
+                if (data.payload.message === 'success') {
+                    window.alert('Message successfully sent')
+                } else {
+                    window.alert('Sorry, message failed to send')
+                }
+            } catch (err) {
+                window.alert('Sorry, something went wrong!')
+            }
+        }
+    }
+
     return (
-        <form className='was-validated'>
+        <form className='was-validated' onSubmit={handleSubmitForm}>
             <div className='row md-form px-4 pt-4'>
                 <div className='form-group col-sm-4'>
                     <label> Name:
