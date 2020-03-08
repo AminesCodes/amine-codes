@@ -15,19 +15,18 @@ export default function ContactForm() {
 
         if (name && email && subject && message) {
             try {
-                const { data } = await axios.post('/api/contact/send', {name, email, subject, message})
-                console.log(data.payload)
-                if (data.payload.status === 'success') {
+                const { data } = await axios.post('/api/contact/send', {name, email, subject, message});
+                if (data.status === 'success') {
                     window.alert('Message successfully sent');
                     setName('');
                     setEmail('');
                     setSubject('');
                     setMessage('');
                 } else {
-                    // window.alert('Sorry, message failed to send');
+                    window.alert('Sorry, message failed to send');
                 }
             } catch (err) {
-                // window.alert('Sorry, something went wrong!');
+                window.alert('Sorry, something went wrong!');
             }
         }
     }

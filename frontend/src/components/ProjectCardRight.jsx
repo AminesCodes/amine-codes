@@ -15,13 +15,13 @@ export default function ProjectCardRight(props) {
                         <h5 className='card-title text-center'>{props.project.title}</h5>
                         <p className='card-text'>{props.project.description}</p>
                     </div>
-                </div>
-            </div>
-            <div className='text-center'>
-                Techs: {props.project.techs}
-                <div className='d-flex justify-content-between' style={{height: '5vh'}}>
-                    <a href={props.project.github}><GithubIcon className='smallIcon'/></a>
-                    <a href={props.project.live}><PlayIcon className='smallIcon'/></a>
+                    <div className='text-center'>
+                        Techs: {props.project.techs}
+                        <div className='d-flex justify-content-between' style={{height: '5vh'}}>
+                            <a href={props.project.github}><GithubIcon className='smallIcon'/></a>
+                            <a href={props.project.live}><PlayIcon className='smallIcon'/></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
