@@ -36,12 +36,15 @@ export default function Projects(props) {
                 </AnchorLink>
             </div>
             <div className='container-md appSection mx-3-auto'>
-                {projects.map((project, i) => {
-                    if (i % 2) {
-                        return <ProjectCardRight key={project.title} project={project}/>
-                    }
-                    return <ProjectCardLeft key={project.title} project={project}/>
-                })}
+                { window.innerWidth < 576
+                    ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
+                    : projects.map((project, i) => {
+                        if (i % 2) {
+                            return <ProjectCardRight key={project.title} project={project}/>
+                        }
+                        return <ProjectCardLeft key={project.title} project={project}/>
+                        })
+                }
             </div>
             <div className='text-right'>
                 <AnchorLink href='#contact'>

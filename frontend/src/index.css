@@ -60,5 +60,6 @@ code {
 }
 
 .skillIcon {
-  max-width: 100px;
+  max-width: 13vmax;
+  min-width: 10vmax;
 }
