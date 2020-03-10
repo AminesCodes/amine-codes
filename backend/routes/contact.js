@@ -6,7 +6,9 @@ const user = require('../config');
 
 const transport = {
   host: 'smtp-mail.outlook.com.', // Don’t forget to replace with the SMTP host of your provider
+  // host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
   port: 587,
+  // service: 'gmail',
   auth: { user: user.USER, pass: user.PASS }
 }
 
@@ -26,8 +28,10 @@ router.post('/send', (request, response) => {
   const content = `name: ${name} \n email: ${email} \n subject: ${subject} \n message: ${message} `
 
   const mail = {
-    from: name,
-    to: 'aminbensalem@outlook.com',  // Change to email address that you want to receive messages on
+    from: user.USER,
+    // to: 'amine.ben@live.com',  
+    // to: 'aminbensalem@outlook.com',  
+    to: 'aminebensalem@pursuit.org',  
     subject: 'New Message from Contact Form',
     text: content
   }
