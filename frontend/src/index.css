@@ -31,22 +31,16 @@ code {
   fill: #00adb5
 }
 
-.smallIcon:hover {
-  fill: #eeeeee;
-  background-color: #00adb5;
-  border-radius: 20%;
-}
-
 .navIcon {
   cursor: pointer;
   height: 5vh;
   fill: #00adb5;
 }
 
-.navIcon:hover {
+.navIcon:hover, .smallIcon:hover {
   fill: #eeeeee;
-  background-color: #00adb5;
-  border-radius: 20%;
+  /* background-color: #00adb5;
+  border-radius: 20%; */
 }
 
 .stickyTop {
@@ -63,4 +57,8 @@ code {
 .btnClear {
   background-color: transparent;
   border: transparent
+}
+
+.skillIcon {
+  max-width: 100px;
 }

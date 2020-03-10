@@ -37,14 +37,14 @@ export default function Skills(props) {
             <div className='container-md appSection mx-3-auto'>
                 <div className='text-center h2'>Some of the tools I like to work with</div>
                 <div className='row justify-content-sm-center'>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><ReactIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><JsIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><NodeIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><HtmlIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><CssIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><PostgresIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><ExpressIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5'><GitIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><ReactIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><JsIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><NodeIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><HtmlIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><CssIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><PostgresIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><ExpressIcon /></div>
+                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><GitIcon /></div>
                 </div>
             </div>
             <div className='text-right'>
