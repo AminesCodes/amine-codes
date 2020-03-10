@@ -19,9 +19,15 @@ code {
     monospace;
 }
 
-.appSection {
+.appSectionDark {
   background-color: #1f1d20e5;
   min-height: 80vh;
+}
+
+.appSectionLight {
+  background-color: #ffffffe5;
+  min-height: 80vh;
+  color: black;
 }
 
 .smallIcon {
@@ -62,4 +68,15 @@ code {
 .skillIcon {
   max-width: 13vmax;
   min-width: 10vmax;
+}
+
+.emailLink {
+  color: #00adb5;
+  font-weight: bolder;
+}
+
+.emailLink:hover {
+  color: #eeeeee;
+  font-weight: bolder;
+  text-decoration: none;
 }

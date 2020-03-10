@@ -35,7 +35,7 @@ export default function Projects(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSection mx-3-auto'>
+            <div className='container-md appSectionDark mx-3-auto'>
                 { window.innerWidth < 576
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
                     : projects.map((project, i) => {

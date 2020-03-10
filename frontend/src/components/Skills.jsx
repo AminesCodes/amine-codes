@@ -34,7 +34,7 @@ export default function Skills(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSection mx-3-auto'>
+            <div className='container-md appSectionLight mx-3-auto'>
                 <div className='text-center h2'>Some of the tools I like to work with</div>
                 <div className='row justify-content-sm-center'>
                     <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><ReactIcon /></div>

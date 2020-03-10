@@ -17,9 +17,13 @@ export default function ProjectCardLeft(props) {
                             <span className='font-weight-bold'>Techs:</span> {props.project.techs}
                         </div>
                         <div className='d-flex justify-content-between'>
-                            <a href={props.project.github}><GithubIcon className='smallIcon'/></a>
+                            <a href={props.project.github} target='_blank' rel='noopener noreferrer'>
+                                <GithubIcon className='smallIcon'/>
+                            </a>
                             { props.project.live.length
-                                ? <a href={props.project.live}><PlayIcon className='smallIcon mb-2'/></a>
+                                ? <a href={props.project.live} target='_blank' rel='noopener noreferrer'>
+                                    <PlayIcon className='smallIcon mb-2'/>
+                                    </a>
                                 : null
                             }
                         </div>

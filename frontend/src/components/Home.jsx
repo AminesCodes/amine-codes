@@ -24,7 +24,7 @@ export default function Home(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSection mx-3-auto'>
+            <div className='container-md appSectionDark mx-3-auto'>
                 HOME
             </div>
             <div className='text-right'>

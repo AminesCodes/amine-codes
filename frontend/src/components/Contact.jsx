@@ -25,8 +25,15 @@ export default function Contact(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSection mx-3-auto'>
+            <div className='container-md appSectionDark mx-3-auto'>
                 <ContactForm />
+                <p className='text-center mt-3'>You can also use your email client</p>
+                <a className='d-block text-center mx-2 px-2 emailLink' 
+                    href='mailto:aminebensalem@pursuit.org'
+                    target='_blank' rel='noopener noreferrer'
+                    >
+                    aminebensalem@pursuit.org
+                </a>
             </div>
             <div style={{height: '10vh'}}></div>
         </section>
