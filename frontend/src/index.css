@@ -65,7 +65,12 @@ code {
   border: transparent
 }
 
-.skillIcon {
+.skillIconSm {
+  max-width: 20vmax;
+  min-width: 15vmax;
+}
+
+.skillIconLg {
   max-width: 13vmax;
   min-width: 10vmax;
 }

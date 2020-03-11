@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
@@ -16,6 +16,19 @@ import { ReactComponent as ReactIcon } from '../assets/skills/react.svg';
 
 
 export default function Skills(props) {
+    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
+
+    React.useEffect(() => {
+        window.addEventListener('resize', () => {
+            setTimeout(() => {
+                setScreenWidth(window.innerWidth)   
+            }, 1500);
+        })
+        return _ => window.removeEventListener('resize', () => {
+            setScreenWidth(window.innerWidth)
+        })
+    })
+
     const style = {
         background: `url(${require('../assets/coding-laptop.jpeg')}) no-repeat center center fixed`,
         WebkitBackgroundSize: 'cover',
@@ -23,6 +36,28 @@ export default function Skills(props) {
         OBackgroundSize: 'cover',
         backgroundSize: 'cover',
     }
+
+    const smallScreen = <>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><ReactIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><JsIcon />Javascript</div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><NodeIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><HtmlIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><CssIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><PostgresIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><ExpressIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><GitIcon /></div>
+        </>
+
+    const largeScreen = <>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ReactIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><JsIcon />Javascript</div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><NodeIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><HtmlIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><CssIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><PostgresIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ExpressIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><GitIcon /></div>
+        </>
     
     return(
         <section className='container-fluid p-3' id='skills' style={style}>
@@ -35,16 +70,12 @@ export default function Skills(props) {
                 </AnchorLink>
             </div>
             <div className='container-md appSectionLight mx-3-auto'>
-                <div className='text-center h2'>Some of the tools I like to work with</div>
-                <div className='row justify-content-sm-center'>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><ReactIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><JsIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><NodeIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><HtmlIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><CssIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><PostgresIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><ExpressIcon /></div>
-                    <div className='col-6 col-md-4 col-lg-3 my-5 skillIcon'><GitIcon /></div>
+                <div className='text-center h2 pt-3'>Some of the tools I like to work with</div>
+                <div className='row justify-content-sm-center mx-auto text-center'>
+                    { screenWidth < 700
+                        ? smallScreen
+                        : largeScreen
+                    }
                 </div>
             </div>
             <div className='text-right'>
