@@ -4,8 +4,6 @@ secret.js
 
 .env
 
-config.js
-
 # dependencies
 node_modules
 .pnp

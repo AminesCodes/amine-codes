@@ -2,14 +2,13 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 
-const user = require('../config');
 
 const transport = {
   host: 'smtp-mail.outlook.com.', // Don’t forget to replace with the SMTP host of your provider
   // host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
   port: 587,
   // service: 'gmail',
-  auth: { user: user.USER, pass: user.PASS }
+  auth: { user: process.env.USR_EMAIL, pass: process.env.PASS }
 }
 
 const transporter = nodemailer.createTransport(transport)
