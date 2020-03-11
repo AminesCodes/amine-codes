@@ -27,7 +27,7 @@ router.post('/send', (request, response) => {
   const content = `name: ${name} \n email: ${email} \n subject: ${subject} \n message: ${message} `
 
   const mail = {
-    from: user.USER,
+    from: process.env.USR_EMAIL,
     // to: 'amine.ben@live.com',  
     // to: 'aminbensalem@outlook.com',  
     to: 'aminebensalem@pursuit.org',  
