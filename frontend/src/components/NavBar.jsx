@@ -12,7 +12,7 @@ export default function NavBar(props) {
                 <span className='navbar-toggler-icon'></span>
             </button>
             <div className='collapse navbar-collapse' id='collapsibleNavbar'>
-                <ul className='navbar-nav'>
+                <ul className='navbar-nav ml-auto'>
                     <li className='nav-item'>
                         <AnchorLink className='nav-link mb-0 h6' href='#home'>Home</AnchorLink>
                     </li>
