@@ -35,7 +35,7 @@ export default function Home(props) {
             </div>
 
             <div className='container-md appSectionDark mx-3-auto'>
-                <div className='row h-100'>
+                <div className='row' style={{minHeight: '80vh'}}>
                     <div className='col-sm-6 my-auto text-center'>
                         Amine Bensalem
                     </div>
