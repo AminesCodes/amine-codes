@@ -6,7 +6,7 @@ export default function NavBar(props) {
     return (
         <nav className='navbar navbar-expand-md navbar-dark bg-dark' id='navbar'>
             <AnchorLink className='navbar-brand' href='#home'>
-                <img className='img-fluid' src={require('../assets/nav_icons/file-code-regular.svg')} alt='app logo' width='50px' />
+                <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
             </AnchorLink>
             <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
                 <span className='navbar-toggler-icon'></span>

@@ -1,3 +1,5 @@
+
+
 html, body, #root {
   height: 100;
   overflow: scroll;
@@ -84,4 +86,19 @@ code {
   color: #eeeeee;
   font-weight: bolder;
   text-decoration: none;
+}
+
+.textLink {
+  color: #00adb5;
+  font-weight: bolder;
+  /* text-decoration: underline; */
+  border-bottom: dashed thin;
+}
+
+.fullName {
+
+}
+
+.logo {
+  height: 6vh;
 }

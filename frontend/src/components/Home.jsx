@@ -8,6 +8,8 @@ import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
 import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 
+const appLogo = require('../assets/Portfolio_Icon.png');
+
 export default function Home(props) { 
     const [ isCardFlipped, setIsCardFlipped ] = useState(false);
 
@@ -37,10 +39,10 @@ export default function Home(props) {
             <div className='container-md appSectionDark mx-3-auto'>
                 <div className='row' style={{minHeight: '80vh'}}>
                     <div className='col-sm-6 my-auto text-center'>
-                        Amine Bensalem
+                        <img className='d-block mx-auto w-75' src={appLogo} alt='App logo'/>
                     </div>
 
-                    <div className='col-sm-6 my-auto text-center'>
+                    <div className='col-sm-6 my-auto text-center h-100'>
                         <ReactCardFlip isFlipped={isCardFlipped} flipDirection="vertical">
                             <HomeCardFront handleHover={handleHover} />
                             <HomeCardBack handleHover={handleHover} />
