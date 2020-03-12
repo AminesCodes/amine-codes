@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 export default (props) => {
     const [ display, setDisplay ] = useState('visible');
+    
     setInterval(() => {
-        const time = new Date().toLocaleTimeString();
-        if (time[7] % 2) {
+        const time = new Date().getSeconds();
+        if (time % 2) {
             setDisplay('visible');
         } else {
             setDisplay('invisible');
