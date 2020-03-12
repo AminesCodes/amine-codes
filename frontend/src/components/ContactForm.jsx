@@ -13,7 +13,7 @@ export default function ContactForm() {
     const handleSubmitForm = async(e) => {
         e.preventDefault();
 
-        if (name && email && subject && message) {
+        if (email && message) {
             try {
                 const { data } = await axios.post('/api/contact/send', {name, email, subject, message});
                 if (data.status === 'success') {
@@ -32,14 +32,14 @@ export default function ContactForm() {
     }
 
     return (
-        <form className='was-validated' onSubmit={handleSubmitForm}>
+        <form className='' onSubmit={handleSubmitForm}>
             <div className='row md-form px-4 pt-4'>
                 <div className='form-group col-sm-4'>
                     <label> Name:
                         <input 
                             type='text' 
                             className='form-control' 
-                            placeholder='Enter Name' 
+                            placeholder='Name (Optional)' 
                             value={name}
                             onChange={e => setName(e.target.value)}
                             required />
@@ -49,7 +49,7 @@ export default function ContactForm() {
                 </div>
 
                 <div className='form-group col-sm-4'>
-                    <label> Email:
+                    <label> Email: <span className='h6 text-danger font-italic'>(Required)</span>
                         <input 
                             type='email' 
                             className='form-control' 
@@ -67,7 +67,7 @@ export default function ContactForm() {
                         <input 
                             type='text' 
                             className='form-control' 
-                            placeholder='Subject' 
+                            placeholder='Subject (Optional)' 
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
                             required />
@@ -77,7 +77,8 @@ export default function ContactForm() {
                 </div>
 
                 <div className='form-group col-sm-12 px-3'>
-                    <label htmlFor='message' className='w-100'>Message:
+                    <label htmlFor='message' className='w-100'>Message: 
+                        <span className='h6 text-danger font-italic'> (Required)</span>
                         <textarea 
                             className='form-control mb-2 mr-sm-2'
                             placeholder='Enter your message here' 
