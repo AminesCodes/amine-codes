@@ -102,3 +102,12 @@ code {
 .logo {
   height: 6vh;
 }
+
+.visible {
+  visibility: visible;
+  font-weight: bolder;
+}
+
+.invisible {
+  visibility: hidden;
+}
