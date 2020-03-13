@@ -4,7 +4,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export default function NavBar(props) {
     return (
-        <nav className='navbar navbar-expand-md navbar-dark bg-dark' id='navbar'>
+        <nav className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
             <AnchorLink className='navbar-brand' href='#home'>
                 <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
             </AnchorLink>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import ProjectCardRight from './ProjectCardRight';
@@ -16,6 +16,20 @@ export default function Projects(props) {
     projects[3].image = require('../assets/apps_images/Pokemon_Battle.png');
     projects[4].image = require('../assets/apps_images/Memory_Game.png');
     projects[5].image = require('../assets/apps_images/Tic_Tac_Toe.png');
+    
+    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
+    
+    const handleResize = () => {
+        setScreenWidth(window.innerWidth 
+            || document.documentElement.clientWidth 
+            || document.body.clientWidth);
+        setTimeout(() => {}, 1000);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return () => window.addEventListener('resize', handleResize);
+    });
 
     const style = {
         background: `url(${require('../assets/coding-screen.png')}) no-repeat center center fixed`,
@@ -36,7 +50,7 @@ export default function Projects(props) {
                 </AnchorLink>
             </div>
             <div className='container-md appSectionDark mx-3-auto'>
-                { window.innerWidth < 576
+                { screenWidth < 576
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
                     : projects.map((project, i) => {
                         if (i % 2) {
