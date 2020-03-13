@@ -4,8 +4,8 @@ import ReactCardFlip from 'react-card-flip';
 
 import HomeCardFront from './HomeCardFront';
 import HomeCardBack from './HomeCardBack';
-import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
-import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
+// import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
+// import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 
 const appLogo = require('../assets/Portfolio_Icon.png');
@@ -27,16 +27,17 @@ export default function Home(props) {
 
     return(
         <section className='container-fluid p-3' id='home' style={style}>
-            <div className='d-flex justify-content-between stickyTop'>
-                <AnchorLink href='#navbar'>
+            <div style={{height: props.pad}}></div>
+            {/* <div className='d-flex justify-content-between stickyTop'>
+                <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
                 </AnchorLink>
-                <AnchorLink href='#navbar'>
+                <AnchorLink href='#home'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
-            </div>
+            </div> */}
 
-            <div className='container-md appSectionDark mx-3-auto'>
+            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${props.h}px`}}>
                 <div className='row' style={{minHeight: '80vh'}}>
                     <div className='col-sm-6 my-auto text-center'>
                         <img className='d-block mx-auto w-75' src={appLogo} alt='App logo'/>

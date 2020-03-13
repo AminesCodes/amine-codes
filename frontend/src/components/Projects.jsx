@@ -20,9 +20,16 @@ export default function Projects(props) {
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
     
     const handleResize = () => {
-        setScreenWidth(window.innerWidth 
-            || document.documentElement.clientWidth 
-            || document.body.clientWidth);
+        const width = window.innerWidth 
+        || document.documentElement.clientWidth 
+        || document.body.clientWidth;
+
+        const height = window.innerHeight 
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        setScreenWidth(width);
+        props.getScreenHeight(height)
         setTimeout(() => {}, 1000);
     }
 
@@ -40,16 +47,17 @@ export default function Projects(props) {
     }
     
     return(
-        <section className='container-fluid p-3' id='projects' style={style}>
+        <section className='container-fluid px-3 pb-3' id='projects' style={style}>
+            <div style={{height: props.pad}}></div>
             <div className='d-flex justify-content-between'>
-                <AnchorLink href='#navbar'>
+                <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
                 </AnchorLink>
                 <AnchorLink href='#skills'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSectionDark mx-3-auto'>
+            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${props.h}px`}}>
                 { screenWidth < 576
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
                     : projects.map((project, i) => {

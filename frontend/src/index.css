@@ -23,12 +23,12 @@ code {
 
 .appSectionDark {
   background-color: #1f1d20e5;
-  min-height: 80vh;
+  /* min-height: 80vh; */
 }
 
 .appSectionLight {
   background-color: #ffffffe5;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   color: black;
 }
 

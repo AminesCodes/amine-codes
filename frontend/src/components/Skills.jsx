@@ -18,13 +18,13 @@ import { ReactComponent as ReactIcon } from '../assets/skills/react.svg';
 export default function Skills(props) {
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('resize', () => {
             setTimeout(() => {
                 setScreenWidth(window.innerWidth)   
             }, 1500);
         })
-        return _ => window.removeEventListener('resize', () => {
+        return () => window.removeEventListener('resize', () => {
             setScreenWidth(window.innerWidth)
         })
     })
@@ -60,16 +60,17 @@ export default function Skills(props) {
         </>
     
     return(
-        <section className='container-fluid p-3' id='skills' style={style}>
+        <section className='container-fluid px-3 pb-3' id='skills' style={style}>
+            <div style={{height: props.pad}}></div>
             <div className='d-flex justify-content-between'>
-                <AnchorLink href='#navbar'>
+                <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
                 </AnchorLink>
                 <AnchorLink href='#home'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSectionLight mx-3-auto'>
+            <div className='container-md appSectionLight mx-3-auto' style={{minHeight: `${props.h}px`}}>
                 <div className='text-center h2 pt-3'>Some of the tools I like to work with</div>
                 <div className='row justify-content-sm-center mx-auto text-center'>
                     { screenWidth < 700

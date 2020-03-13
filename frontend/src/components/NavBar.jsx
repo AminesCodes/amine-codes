@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 export default function NavBar(props) {
+    const [ dimension, setDimension ] = useState({});
+    const targetRef = useRef();
+
+    useLayoutEffect(() => {
+        const dim = targetRef.current.getBoundingClientRect()
+        setDimension(dim);
+        props.getNavBarHeight(dim.height);
+        console.log(dimension)
+    }, targetRef.current)
+
     return (
-        <nav className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
+        <nav ref={targetRef} className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
             <AnchorLink className='navbar-brand' href='#home'>
                 <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
             </AnchorLink>
