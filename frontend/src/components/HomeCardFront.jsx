@@ -15,9 +15,9 @@ export default (props) => {
     return (
         <div className='h-100'>
             <p className='font-weight-bold'>Hello world! <span className={display}>_</span></p>
-            <p>My name is Amine Bensalem. <br/>
-                I am a software engineer <br/>
-                living in New York City.<br/>
+            <p>I'm Amine Bensalem, <br/>
+                a New York City based <br/>
+                Software Engineer. <br/>
                 <span className='textLink' onMouseEnter={() => props.handleHover(true)}>
                     Want to know more about me?
                 </span>

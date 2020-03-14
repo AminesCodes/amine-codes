@@ -25,9 +25,11 @@ export default function Home(props) {
         backgroundSize: 'cover',
     }
 
+    const h = props.sectionInnerDivH - (1 * props.navIconH)
+
     return(
         <section className='container-fluid p-3' id='home' style={style}>
-            <div style={{height: props.pad}}></div>
+            <div style={{height: props.navBarH}}></div>
             {/* <div className='d-flex justify-content-between stickyTop'>
                 <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
@@ -37,8 +39,8 @@ export default function Home(props) {
                 </AnchorLink>
             </div> */}
 
-            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${props.h}px`}}>
-                <div className='row' style={{minHeight: '80vh'}}>
+            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
+                <div className='row' style={{minHeight: `${h}px`}}>
                     <div className='col-sm-6 my-auto text-center'>
                         <img className='d-block mx-auto w-75' src={appLogo} alt='App logo'/>
                     </div>

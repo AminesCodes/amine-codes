@@ -58,10 +58,12 @@ export default function Skills(props) {
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ExpressIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><GitIcon /></div>
         </>
+
+    const h = props.sectionInnerDivH - (2 * props.navIconH);
     
     return(
         <section className='container-fluid px-3 pb-3' id='skills' style={style}>
-            <div style={{height: props.pad}}></div>
+            <div style={{height: props.navBarH}}></div>
             <div className='d-flex justify-content-between'>
                 <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
@@ -70,7 +72,7 @@ export default function Skills(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSectionLight mx-3-auto' style={{minHeight: `${props.h}px`}}>
+            <div className='container-md appSectionLight mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 pt-3'>Some of the tools I like to work with</div>
                 <div className='row justify-content-sm-center mx-auto text-center'>
                     { screenWidth < 700

@@ -32,6 +32,7 @@ export default function ContactForm() {
     }
 
     return (
+        // <form className='was-validated' onSubmit={handleSubmitForm}>
         <form className='' onSubmit={handleSubmitForm}>
             <div className='row md-form px-4 pt-4'>
                 <div className='form-group col-sm-4'>
@@ -42,10 +43,10 @@ export default function ContactForm() {
                             placeholder='Name (Optional)' 
                             value={name}
                             onChange={e => setName(e.target.value)}
-                            required />
+                             />
                     </label>
-                    <div className='valid-feedback'>Valid.</div>
-                    <div className='invalid-feedback'>Please fill out this field.</div>
+                    {/* <div className='valid-feedback'>Valid.</div>
+                    <div className='invalid-feedback'>Please fill out this field.</div> */}
                 </div>
 
                 <div className='form-group col-sm-4'>
@@ -70,10 +71,10 @@ export default function ContactForm() {
                             placeholder='Subject (Optional)' 
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
-                            required />
+                             />
                     </label>
-                    <div className='valid-feedback'>Valid.</div>
-                    <div className='invalid-feedback'>Please fill out this field.</div>
+                    {/* <div className='valid-feedback'>Valid.</div>
+                    <div className='invalid-feedback'>Please fill out this field.</div> */}
                 </div>
 
                 <div className='form-group col-sm-12 px-3'>

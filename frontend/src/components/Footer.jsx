@@ -14,7 +14,6 @@ export default function Footer(props) {
         const dim = targetRef.current.getBoundingClientRect()
         setDimension(dim);
         props.getFooterHeight(dim.height);
-        console.log(dimension)
     }, targetRef.current)
 
     return (

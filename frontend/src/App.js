@@ -12,7 +12,9 @@ function App() {
   const [ navBarHeight, setNavBarHeight ] = useState(0);
   const [ footerHeight, setFooterHeight ] = useState(0);
   const [ screenHeight, setScreenHeight ] = useState(0);
+  const [ navIconsHeight, setNavIconsHeight ] = useState(0);
   const [ sectionHeight, setSectionHeight ] = useState(0);
+  const [ sectionInnerH, setSectionInnerH ] = useState(0);
 
   const getNavBarHeight = dim => {
     setNavBarHeight(dim)
@@ -20,6 +22,7 @@ function App() {
 
   const getFooterHeight = dim => {
     setFooterHeight(dim)
+    setNavIconsHeight(dim)
   }
 
   const getScreenHeight = dim => {
@@ -27,17 +30,21 @@ function App() {
   }
 
   useEffect(() => {
-    setSectionHeight(screenHeight - (navBarHeight + footerHeight))
-    console.log(1000, 'Updating height')
+    setSectionHeight(screenHeight - (navBarHeight + footerHeight));
+    setSectionInnerH(screenHeight 
+      - (navBarHeight + footerHeight 
+          + 2 * 16 // p-3 of container div is 1rem = 16px
+        )); // missing the arrows icons
+
   }, [navBarHeight, footerHeight, screenHeight])
 
   return (
     <div className="App">
       <NavBar getNavBarHeight={getNavBarHeight}/>
-      <Home pad={navBarHeight} h={sectionHeight}/>
-      <Skills pad={navBarHeight} h={sectionHeight}/>
-      <Projects pad={navBarHeight} h={sectionHeight} getScreenHeight={getScreenHeight}/>
-      <Contact pad={navBarHeight} h={sectionHeight}/>
+      <Home sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
+      <Skills sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
+      <Projects sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} getScreenHeight={getScreenHeight}/>
+      <Contact sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
       <Footer getFooterHeight={getFooterHeight}/>
     </div>
   );

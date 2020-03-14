@@ -15,18 +15,20 @@ export default function Contact(props) {
         backgroundSize: 'cover',
     }
     
+    const h = props.sectionInnerDivH - (1 * props.navIconH);
+    
     return(
         <section className='container-fluid px-3 pb-3' id='contact' style={style}>
-            <div style={{height: props.pad}}></div>
+            <div style={{height: props.navBarH}}></div>
             <div className='d-flex justify-content-between'>
-            <AnchorLink href='#home'>
+                <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
                 </AnchorLink>
                 <AnchorLink href='#projects'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${props.h}px`}}>
+            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 pt-3'>Get in touch</div>
                 <div className='text-center h4 pt-3'>Feel free to reach out via the contact form</div>
                 <ContactForm />

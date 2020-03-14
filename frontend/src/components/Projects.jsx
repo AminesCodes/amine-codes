@@ -29,9 +29,17 @@ export default function Projects(props) {
         || document.body.clientHeight;
 
         setScreenWidth(width);
-        props.getScreenHeight(height)
+        props.getScreenHeight(height);
         setTimeout(() => {}, 1000);
     }
+
+    useEffect(() => {
+        const height = window.innerHeight 
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+        
+        props.getScreenHeight(height);
+    }, [])
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
@@ -46,9 +54,11 @@ export default function Projects(props) {
         backgroundSize: 'cover',
     }
     
+    const h = props.sectionInnerDivH - (2 * props.navIconH);
+    
     return(
         <section className='container-fluid px-3 pb-3' id='projects' style={style}>
-            <div style={{height: props.pad}}></div>
+            <div style={{height: props.navBarH}}></div>
             <div className='d-flex justify-content-between'>
                 <AnchorLink href='#home'>
                     <HomeIcon className='navIcon'/>
@@ -57,7 +67,7 @@ export default function Projects(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
             </div>
-            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${props.h}px`}}>
+            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
                 { screenWidth < 576
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
                     : projects.map((project, i) => {
