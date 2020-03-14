@@ -13,6 +13,8 @@ import { ReactComponent as JsIcon } from '../assets/skills/js.svg';
 import { ReactComponent as NodeIcon } from '../assets/skills/node.svg';
 import { ReactComponent as PostgresIcon } from '../assets/skills/postgres.svg';
 import { ReactComponent as ReactIcon } from '../assets/skills/react.svg';
+import { ReactComponent as BootstrapIcon } from '../assets/skills/bootstrap.svg';
+import { ReactComponent as HerokuIcon } from '../assets/skills/heroku.svg';
 
 
 export default function Skills(props) {
@@ -45,7 +47,9 @@ export default function Skills(props) {
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><CssIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><PostgresIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><ExpressIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><BootstrapIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><GitIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><HerokuIcon /></div>
         </>
 
     const largeScreen = <>
@@ -56,7 +60,9 @@ export default function Skills(props) {
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><CssIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><PostgresIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ExpressIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><BootstrapIcon /></div>
             <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><GitIcon /></div>
+            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><HerokuIcon /></div>
         </>
 
     const h = props.sectionInnerDivH - (2 * props.navIconH);
